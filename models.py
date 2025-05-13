@@ -1,27 +1,31 @@
 from typing import Optional
 from sqlmodel import SQLModel, Field
 
+defending: Optional[float] = Field(default=None)
+
 class Card(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
+
     name: str
     position: str
-    nation: str
+    nationality: str
     league: str
     club: str
-    age: int
-    height: int
-    weight: int
-    overall: int
-    pace: int
-    shooting: int
-    passing: int
-    dribbling: int
-    defending: int
-    physical: int
-    skill_moves: int
-    weak_foot: int
-    preferred_foot: str
-    traits: str
+
+    age: Optional[int] = Field(default=None)
+    height: Optional[int] = Field(default=None)
+    weight: Optional[int] = Field(default=None)
+    overall: Optional[int] = Field(default=None)
+    pace: Optional[int] = Field(default=None)
+    shooting: Optional[int] = Field(default=None)
+    passing: Optional[int] = Field(default=None)
+    dribbling: Optional[int] = Field(default=None)
+    defending: Optional[int] = Field(default=None)
+    physical: Optional[int] = Field(default=None)
+    skill_moves: Optional[int] = Field(default=None)
+    weak_foot: Optional[int] = Field(default=None)
+    preferred_foot: Optional[str] = Field(default=None)
+    traits: Optional[str] = Field(default=None)
 
     gk_diving: Optional[int] = Field(default=None)
     gk_handling: Optional[int] = Field(default=None)
